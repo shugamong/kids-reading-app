@@ -1,0 +1,13 @@
+
+{
+  "expo": {
+    "name": "BookCalendar",
+    "slug": "kids-reading-app",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "android": {
+      "package": "com.shugamong.kidsreadingapp",
+      "versionCode": 1
+    }
+  }
+}
