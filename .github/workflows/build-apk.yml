@@ -11,23 +11,15 @@ jobs:
       - name: 🚀 Checkout Repository
         uses: actions/checkout@v4
 
-      - name: ⚙️ Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 22
-          cache: 'npm'
-
       - name: ☕ Setup Java JDK
         uses: actions/setup-java@v5
         with:
           distribution: 'temurin'
           java-version: '17'
 
-      - name: 📦 Install Dependencies
-        run: npm install
-
-      - name: 🛠️ Build Android APK with Expo Local Build
+      - name: 📦 Install Dependencies & Build APK
         run: |
+          npm install
           npm install -g eas-cli
           npx expo prebuild --platform android --clean
           cd android && ./gradlew assembleRelease
