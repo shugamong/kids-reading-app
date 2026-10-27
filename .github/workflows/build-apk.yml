@@ -26,11 +26,15 @@ jobs:
 
 
 
+
       - name: Install Dependencies
         run: |
           node --version
           npm --version
           npm install --no-audit --no-fund
+          npx expo install --fix --npm
+          npx expo-doctor
+
 
 
       - name: Check Expo Configuration
