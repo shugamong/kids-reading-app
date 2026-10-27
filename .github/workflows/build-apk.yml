@@ -25,15 +25,13 @@ jobs:
           java-version: '17'
 
 
+
       - name: Install Dependencies
         run: |
           node --version
           npm --version
-          if [ -f package-lock.json ]; then
-            npm ci
-          else
-            npm install
-          fi
+          npm install --no-audit --no-fund
+
 
       - name: Check Expo Configuration
         run: |
